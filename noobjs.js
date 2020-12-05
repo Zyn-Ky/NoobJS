@@ -85,7 +85,6 @@ function loadajaxrefresh(filename, resultquery, time) {
                     xhttpajaxload.onreadystatechange = function() {
                         if (this.readyState == 4 && this.status == 200) {
                             return setInterval(function() {
-                                console.log(xhttpajaxload.responseText);
                                 return document.querySelector(resultquery).innerHTML = xhttpajaxload.responseText;
                             }, timeres);
                         }
